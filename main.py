@@ -1,6 +1,7 @@
 from tkinter import Tk
 from config_input.config_inputs import ConfigInputs
 from io_box.io_box import IOBox
+from scan_button import ScanButton
 
 
 class MainWindow:
@@ -10,6 +11,7 @@ class MainWindow:
 
         self.inputs = ConfigInputs(self.window)
         self.io_box = IOBox(self.window)
+        self.scan_button = ScanButton(self.window, self.scan)
         self.mount_components()
 
     def setup_window(self):
@@ -19,6 +21,10 @@ class MainWindow:
     def mount_components(self):
         self.inputs.mount()
         self.io_box.mount()
+        self.scan_button.mount()
+
+    def scan(self):
+        pass
 
     def run(self):
         self.window.mainloop()
