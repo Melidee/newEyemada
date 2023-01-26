@@ -20,7 +20,6 @@ class MainWindow:
 
     def mount_components(self):
         self.inputs.mount()
-        self.io_box.mount()
         self.scan_button.mount()
 
     def scan(self):
